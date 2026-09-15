@@ -14,12 +14,10 @@ import { DecisionFrameworkSection } from './components/DecisionFrameworkSection'
 import { InteractiveRiskCalculator } from './components/InteractiveRiskCalculator';
 import { ChapterSummarySection } from './components/ChapterSummarySection';
 import { FooterSection } from './components/FooterSection';
-import { DeploymentModal } from './components/DeploymentModal';
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [fontSize, setFontSize] = useState<'normal' | 'large' | 'xlarge'>('normal');
-  const [deployGuideOpen, setDeployGuideOpen] = useState(false);
 
   // Sync route URL if visiting directly or via links
   useEffect(() => {
@@ -50,7 +48,6 @@ export default function App() {
         onSearchChange={setSearchQuery}
         fontSize={fontSize}
         setFontSize={setFontSize}
-        onOpenDeployGuide={() => setDeployGuideOpen(true)}
       />
 
       {/* Semantic Main Educational Article Body */}
@@ -86,13 +83,7 @@ export default function App() {
       </main>
 
       {/* Semantic Footer with Full Technical & Organization Metadata */}
-      <FooterSection onOpenDeployGuide={() => setDeployGuideOpen(true)} />
-
-      {/* Deployment & Production URL Details Modal */}
-      <DeploymentModal
-        isOpen={deployGuideOpen}
-        onClose={() => setDeployGuideOpen(false)}
-      />
+      <FooterSection />
 
     </div>
   );

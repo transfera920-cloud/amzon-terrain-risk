@@ -1,11 +1,7 @@
 import React from 'react';
-import { Compass, Shield, FileText, Globe, ArrowUp, ExternalLink, Database } from 'lucide-react';
+import { Compass, Shield, FileText, ArrowUp, ExternalLink, Database } from 'lucide-react';
 
-interface FooterSectionProps {
-  onOpenDeployGuide: () => void;
-}
-
-export const FooterSection: React.FC<FooterSectionProps> = ({ onOpenDeployGuide }) => {
+export const FooterSection: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -22,7 +18,7 @@ export const FooterSection: React.FC<FooterSectionProps> = ({ onOpenDeployGuide 
               <div className="w-8 h-8 rounded-lg bg-emerald-950 border border-emerald-600/40 flex items-center justify-center text-emerald-400">
                 <Compass className="w-5 h-5" />
               </div>
-              <span>亞馬遜國家山岳協會</span>
+              <a href="https://amazon-hike.com/intro" className="hover:text-emerald-400 transition-colors">亞馬遜國家山岳協會</a>
             </div>
             <p className="text-stone-400 text-xs leading-relaxed max-w-md">
               登山安全與登山教育知識平台。致力於推動科學化、系統化的山域風險教育，普及地圖判讀、動態環境評估與安全決策理念。
@@ -60,15 +56,6 @@ export const FooterSection: React.FC<FooterSectionProps> = ({ onOpenDeployGuide 
               正式網站與 SEO 宣告
             </div>
             <ul className="space-y-1.5 text-xs">
-              <li>
-                <button 
-                  onClick={onOpenDeployGuide}
-                  className="text-emerald-400 hover:underline flex items-center"
-                >
-                  <Globe className="w-3 h-3 mr-1" />
-                  <span>正式發佈與網址說明</span>
-                </button>
-              </li>
               <li>
                 <a href="/sitemap.xml" target="_blank" rel="noreferrer" className="hover:text-stone-200 flex items-center">
                   <FileText className="w-3 h-3 mr-1" />

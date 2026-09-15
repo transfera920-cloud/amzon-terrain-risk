@@ -6,7 +6,6 @@ interface HeaderNavProps {
   searchQuery: string;
   fontSize: 'normal' | 'large' | 'xlarge';
   setFontSize: (size: 'normal' | 'large' | 'xlarge') => void;
-  onOpenDeployGuide: () => void;
 }
 
 export const HeaderNav: React.FC<HeaderNavProps> = ({
@@ -14,7 +13,6 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
   searchQuery,
   fontSize,
   setFontSize,
-  onOpenDeployGuide
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -118,15 +116,6 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
                   <span className="hidden xs:inline">分享</span>
                 </>
               )}
-            </button>
-
-            {/* Deployment & Production URL Info Button */}
-            <button
-              onClick={onOpenDeployGuide}
-              className="inline-flex items-center space-x-1 px-3 py-1.5 text-xs font-semibold rounded-md bg-emerald-900/60 border border-emerald-600/60 text-emerald-200 hover:bg-emerald-800/80 transition-colors"
-            >
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>正式發佈說明</span>
             </button>
 
             {/* Mobile menu toggle */}

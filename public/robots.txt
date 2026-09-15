@@ -1,9 +1,5 @@
-# robots.txt for 亞馬遜國家山岳協會 (Amazon Mountaineering Association)
 User-agent: *
 Allow: /
-Allow: /terrain-risk/
-Disallow: /preview/
-Disallow: /test/
-Disallow: /admin/
 
-Sitemap: https://amazon-mountaineering.org/sitemap.xml
+Sitemap: https://835e72ad-amzon-terrain-risk.transferb920.workers.dev/sitemap.xml
+
