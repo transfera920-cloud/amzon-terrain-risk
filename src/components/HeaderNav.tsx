@@ -34,15 +34,19 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
           
           {/* Logo & Platform Name */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-lg bg-emerald-950/80 border border-emerald-600/40 flex items-center justify-center text-emerald-400 shadow-inner">
+            <a 
+              href="https://amazon-hike.com/"
+              className="w-10 h-10 rounded-lg bg-emerald-950/80 border border-emerald-600/40 flex items-center justify-center text-emerald-400 shadow-inner hover:border-emerald-500 transition-colors"
+              aria-label="回亞馬遜國家山岳協會主網站"
+            >
               <Compass className="w-6 h-6" />
-            </div>
+            </a>
             <div>
               <span className="text-xs uppercase tracking-wider text-stone-400 block font-medium">
                 登山安全與登山教育知識平台
               </span>
               <a 
-                href="#top" 
+                href="https://amazon-hike.com/" 
                 className="text-base sm:text-lg font-bold text-stone-100 hover:text-emerald-400 transition-colors"
               >
                 亞馬遜國家山岳協會

@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://835e72ad-amzon-terrain-risk.transferb920.workers.dev/sitemap.xml
+Sitemap: https://chapter05.amazon-hile.com/sitemap.xml
 
