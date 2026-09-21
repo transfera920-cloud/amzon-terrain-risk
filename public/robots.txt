@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://chapter05.amazon-hile.com/sitemap.xml
+Sitemap: https://chapter05.amazon-hike.com/sitemap.xml
 

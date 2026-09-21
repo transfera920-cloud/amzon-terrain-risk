@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
-import { Compass, BookOpen, ShieldAlert, Menu, X, Search, ChevronRight, Share2, Check } from 'lucide-react';
+import { Compass, Menu, X, Search, Share2, Check } from 'lucide-react';
 
 interface HeaderNavProps {
   onSearchChange: (query: string) => void;
   searchQuery: string;
-  fontSize: 'normal' | 'large' | 'xlarge';
-  setFontSize: (size: 'normal' | 'large' | 'xlarge') => void;
+  fontSize?: 'normal' | 'large' | 'xlarge';
+  setFontSize?: (size: 'normal' | 'large' | 'xlarge') => void;
 }
 
 export const HeaderNav: React.FC<HeaderNavProps> = ({
   onSearchChange,
   searchQuery,
-  fontSize,
-  setFontSize,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -35,7 +33,7 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
           {/* Logo & Platform Name */}
           <div className="flex items-center space-x-3">
             <a 
-              href="https://amazon-hike.com/"
+              href="https://amazon-hike.com/intro"
               className="w-10 h-10 rounded-lg bg-emerald-950/80 border border-emerald-600/40 flex items-center justify-center text-emerald-400 shadow-inner hover:border-emerald-500 transition-colors"
               aria-label="回亞馬遜國家山岳協會主網站"
             >
@@ -46,7 +44,7 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
                 登山安全與登山教育知識平台
               </span>
               <a 
-                href="https://amazon-hike.com/" 
+                href="https://amazon-hike.com/intro" 
                 className="text-base sm:text-lg font-bold text-stone-100 hover:text-emerald-400 transition-colors"
               >
                 亞馬遜國家山岳協會
@@ -78,31 +76,6 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
 
           {/* Quick Action Buttons */}
           <div className="flex items-center space-x-2 sm:space-x-3">
-            {/* Font Size Adjuster */}
-            <div className="hidden sm:flex items-center bg-stone-900 border border-stone-800 rounded-md p-1 text-xs">
-              <button
-                onClick={() => setFontSize('normal')}
-                className={`px-2 py-1 rounded transition-colors ${fontSize === 'normal' ? 'bg-stone-800 text-emerald-400 font-bold' : 'text-stone-400 hover:text-stone-200'}`}
-                title="預設字體"
-              >
-                標準
-              </button>
-              <button
-                onClick={() => setFontSize('large')}
-                className={`px-2 py-1 rounded transition-colors ${fontSize === 'large' ? 'bg-stone-800 text-emerald-400 font-bold' : 'text-stone-400 hover:text-stone-200'}`}
-                title="適中字體"
-              >
-                放大
-              </button>
-              <button
-                onClick={() => setFontSize('xlarge')}
-                className={`px-2 py-1 rounded transition-colors ${fontSize === 'xlarge' ? 'bg-stone-800 text-emerald-400 font-bold' : 'text-stone-400 hover:text-stone-200'}`}
-                title="特大字體（適合戶外現場閱讀）"
-              >
-                特大
-              </button>
-            </div>
-
             {/* Share Page Button */}
             <button
               onClick={handleShare}
@@ -135,17 +108,9 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
         </div>
       </div>
 
-      {/* Semantic Breadcrumb Bar */}
+      {/* Semantic Filter & Search Bar */}
       <div className="bg-stone-950/70 border-t border-stone-800/60 py-2 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-2 text-xs text-stone-400">
-          <nav aria-label="Breadcrumb" className="flex items-center space-x-1.5 sm:space-x-2">
-            <a href="/" className="hover:text-stone-200 transition-colors">首頁</a>
-            <ChevronRight className="w-3 h-3 text-stone-600" />
-            <a href="#top" className="hover:text-stone-200 transition-colors">登山教育</a>
-            <ChevronRight className="w-3 h-3 text-stone-600" />
-            <span className="text-emerald-400 font-semibold" aria-current="page">第五章｜地形風險</span>
-          </nav>
-
+        <div className="max-w-7xl mx-auto flex items-center justify-end text-xs text-stone-400">
           {/* Quick Filter Search Bar */}
           <div className="relative flex items-center w-full sm:w-64">
             <Search className="w-3.5 h-3.5 text-stone-500 absolute left-2.5 pointer-events-none" />
@@ -231,31 +196,6 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
             >
               章節總結與安全核心
             </a>
-          </div>
-
-          {/* Mobile font size control */}
-          <div className="pt-2 flex items-center justify-between text-xs text-stone-400 border-t border-stone-800/80">
-            <span>閱讀字體大小：</span>
-            <div className="flex space-x-1">
-              <button
-                onClick={() => setFontSize('normal')}
-                className={`px-3 py-1 rounded ${fontSize === 'normal' ? 'bg-emerald-900 text-white' : 'bg-stone-900 text-stone-400'}`}
-              >
-                標準
-              </button>
-              <button
-                onClick={() => setFontSize('large')}
-                className={`px-3 py-1 rounded ${fontSize === 'large' ? 'bg-emerald-900 text-white' : 'bg-stone-900 text-stone-400'}`}
-              >
-                放大
-              </button>
-              <button
-                onClick={() => setFontSize('xlarge')}
-                className={`px-3 py-1 rounded ${fontSize === 'xlarge' ? 'bg-emerald-900 text-white' : 'bg-stone-900 text-stone-400'}`}
-              >
-                特大
-              </button>
-            </div>
           </div>
         </div>
       )}

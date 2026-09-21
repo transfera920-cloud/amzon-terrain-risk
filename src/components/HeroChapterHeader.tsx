@@ -25,21 +25,12 @@ export const HeroChapterHeader: React.FC = () => {
       </div>
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Organization & Category Tag */}
-        <div className="flex items-center space-x-2 text-emerald-400 text-xs sm:text-sm font-semibold tracking-wide uppercase mb-3">
-          <span className="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
-          <span>亞馬遜國家山岳協會｜山岳安全教育教案</span>
-          <span className="text-stone-600">/</span>
-          <span className="text-stone-400">領域二：安全能力</span>
-        </div>
-
         {/* The Exact and Only H1 on the Page */}
         <h1 
           id="chapter-main-title"
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-stone-100 font-serif leading-tight"
         >
-          {CHAPTER_5_DATA.chapterNumber}｜{CHAPTER_5_DATA.chapterTitle}
+          {CHAPTER_5_DATA.chapterTitle}
         </h1>
 
         {/* Subtitle */}
