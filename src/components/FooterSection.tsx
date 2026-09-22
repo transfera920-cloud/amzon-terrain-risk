@@ -9,7 +9,7 @@ export const FooterSection: React.FC = () => {
           <div className="w-8 h-8 rounded-lg bg-emerald-950 border border-emerald-600/40 flex items-center justify-center text-emerald-400">
             <Compass className="w-5 h-5" />
           </div>
-          <a href="https://amazon-hike.com/intro" className="hover:text-emerald-400 transition-colors">
+          <a href="https://amazon-hike.com/" className="hover:text-emerald-400 transition-colors">
             亞馬遜國家山岳協會
           </a>
         </div>

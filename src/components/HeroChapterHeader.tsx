@@ -25,6 +25,13 @@ export const HeroChapterHeader: React.FC = () => {
       </div>
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Chapter Number Badge */}
+        <div className="mb-3">
+          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-stone-800/80 text-stone-400 border border-stone-700/60 tracking-wider">
+            {CHAPTER_5_DATA.chapterNumber}
+          </span>
+        </div>
+
         {/* The Exact and Only H1 on the Page */}
         <h1 
           id="chapter-main-title"
