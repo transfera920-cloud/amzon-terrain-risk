@@ -30,7 +30,7 @@ export const HeroChapterHeader: React.FC = () => {
           id="chapter-main-title"
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-stone-100 font-serif leading-tight"
         >
-          {CHAPTER_5_DATA.chapterTitle}
+          登山地形風險
         </h1>
 
         {/* Subtitle */}

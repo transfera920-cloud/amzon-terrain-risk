@@ -85,7 +85,7 @@ export interface ChapterData {
 
 export const CHAPTER_5_DATA: ChapterData = {
   chapterNumber: "第五章",
-  chapterTitle: "地形風險",
+  chapterTitle: "登山地形風險",
   subtitle: "從地圖判讀到現場判斷，學習辨識危險地形與安全通過方式。",
   coreConcept: "危險不是來自山本身，而是：地形條件 × 天候變化 × 人員能力",
   coreFormula: "風險 = 地形條件 × 天候變化 × 人員能力",

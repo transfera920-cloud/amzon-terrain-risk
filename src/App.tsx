@@ -21,9 +21,9 @@ export default function App() {
 
   // Sync route URL if visiting directly or via links
   useEffect(() => {
-    // If on /terrain-risk/ or /chapter-5-terrain-risk/, ensure page canonical state is maintained
+    // If on /chapter05/, ensure page canonical state is maintained
     const path = window.location.pathname;
-    if (path === '/' || path === '/terrain-risk/' || path === '/chapter-5-terrain-risk/') {
+    if (path === '/' || path === '/chapter05/') {
       // Valid routes for this standalone educational publication
     }
   }, []);

@@ -1,6 +1,6 @@
 {
-  "name": "亞馬遜國家山岳協會 - 登山地形風險",
-  "description": "了解登山地形風險，從地圖判讀、現場觀察到動態評估，學習辨識坡度、岩質、植被、排水與天候變化所帶來的風險，建立更完整的登山安全決策能力。",
+  "name": "登山地形風險｜山域地形、危險路段與風險判斷",
+  "description": "了解登山地形風險，認識山域地形、危險路段與常見地形變化，建立登山過程中的地形判斷與風險辨識能力。",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
